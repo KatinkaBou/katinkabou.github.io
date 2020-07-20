@@ -1,0 +1,45 @@
+wrapper{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+header{
+	padding: 10px;
+	height: 200px;
+	background: #2B7C99;
+	color: white;
+} 
+
+section{
+	float: left;
+	background: #F9FCFE;
+	height: 100%;
+	width: 100%;
+}
+
+footer{
+	height: 50px;
+	clear: both;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #2B7C99;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 16px 26px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #1D5266;
+  color: white;
+}
+
