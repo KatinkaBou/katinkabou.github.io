@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  		<meta content="utf-8" http-equiv="encoding">	
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>Katharina BOUDGOUST </title>
+
+	</head>
+	<body link="#1D5266" vlink="#6397AA">
+		<div id="wrapper">
+			<header>  <img src="kat.jpg" alt="Katharina BOUDGOUST" height="200" style="float:left">  <center><H1> Katharina BOUDGOUST </H1></center> </header> 
+
+			<div class="topnav">
+  				<a href="index.html">Home</a>
+				<a href="publications.html">Publications</a>
+				<a href="talks.html">Talks</a>
+				<a href="teaching.html">Teaching</a>
+  				<a href="personal.html">Personal</a>
+  			</div> 
+			<section> 				
+			 	<p>Since September 2018, I am a Ph.D student in computer science within the 
+				<a href="https://www.irisa.fr/emsec/"> EMSEC</a> team at 
+				<a href="https://www.irisa.fr/"> IRISA Laboratory</a> in Rennes under the supervision of 
+				<a href="https://www.di.ens.fr/~fouque/"> Pierre-Alain FOUQUE</a> and 
+				<a href="http://people.irisa.fr/Adeline.Roux-Langlois/"> Adeline ROUX-LANGLOIS</a>.
+				Im am working on lattice-based cryptography.</p>
+				
+				<p>From October to December 2019, I visited 
+				<a href="http://users.monash.edu.au/~rste/"> Ron STEINFELD</a> at the 
+				<a href="http://www.monash.edu/cybersecurity-lab"> Cybersecurity Lab</a> of the
+				<a href="https://www.monash.edu/it"> Faculty of Information Technology</a> of the 
+				<a href="http://www.monash.edu"> Monash University</a> in Melbourne, Australia.</p>
+
+				<p> In Mai 2018, I received my master's degree at the
+				<a href="http://www.math.kit.edu/en"> Department of Mathematics</a> at
+				<a href="http://www.kit.edu/english/index.php" > Karlsruhe Institute of Technology</a>.
+				My master thesis <i> Polycylic groups and applications in cryptography</i> was under the supervision
+				of <a href="http://www.math.kit.edu/iag3/~herrlich/"> Frank HERRLICH</a> and 
+				<a href="https://crypto.iti.kit.edu/index.php?id=iks-mueller-quade"> Joern MUELLER-QUADE</a>.</p>
+				<p> Prior to this, I received in July 2014 my bacherlor's degree at the
+				<a href="https://www.mathinf.uni-heidelberg.de/"> Department of Mathematics and Computer Science</a> at
+				<a href="https://www.uni-heidelberg.de/index_e.html" > Heidelberg University</a>.
+				My bachelor thesis <i> Die Kompatibilitaet von Determinantenfunktoren mit Spektralsequenzen und der Kohomologie</i> was under the supervision
+				of <a href="https://www.mathi.uni-heidelberg.de/groups/arithgeom/"> Otmar VENJAKOB</a>.</p>
+				<H3>NEWS</H3>
+				<ul>
+				<li>20.07.2020: Moved my website to a GitHub page :)</li>
+				<li>18.04.2020: <a href="https://en.wikipedia.org/wiki/Brotopia">Brotopia</a> from Emily Chang added to my reading recommandation list for feminist literature and <a href="https://en.wikipedia.org/wiki/Susan_Wojcicki">Susan Wojcicki</a> to my list of important women in computer science</li>
+				<li>14.04.2020: On Friday, 17th April 2020, I will give an online talk at the <a href="https://webmath.univ-rennes1.fr/crypto/2020/Boudgoust"> Seminaire Cryptography</a></li>
+				</ul>							
+				
+				<H3>CONTACT</H3>
+			
+				Katharina BOUDGOUST<br />
+				Office F305, IRISA Rennes <br />
+				Campus universitaire de Beaulieu <br />
+				263 Avenue du General Leclerc <br/>
+				35042 Rennes Cedex <br />
+				France
+				<p>
+				Affiliation: Univ Rennes, CNRS, IRISA
+				</p>
+				<p>
+				E-Mail: katharina.boudgoust [at] irisa.fr <br />
+				PGP Fingerprint: 593A 484D 7342 1E9B 5E40 FAA2 41DA 32B0 C128 C013			
+				</p>
+				
+				<H3>SOCIAL NETWORK</H3>
+				<p>
+				<a href="https://www.linkedin.com/in/katharina-boudgoust/"> Linkedin</a> // 		
+				<a href="https://twitter.com/KBoudgoust"> Twitter</a> //
+				<a href="https://speakerinnen.org/en/profiles/katharina-boudgoust"> Speakerinnen</a>// 
+				<a href="https://github.com/KatinkaBou"> GitHub</a>
+				</p>
+			 </section>
+			<!-- <aside> 
+
+			</aside> -->
+			<footer> Last update: July 20th, 2020. </footer> 
+		</div>
+	</body>
+
+
+</html>
