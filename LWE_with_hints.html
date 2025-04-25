@@ -70,8 +70,8 @@
 			 	<blockquote>
                 <p>
                    Given \(\mat{A} \sample \ring_{q}^{m \times n}\), \(\vec{b}= [\mat{A} | \mat{I}_n] \vec{x} \bmod q\ring\), \(\mat{M}\) and \(\vec{z}=\mat{M}\vec{x} + \vec{f}\), </br>
-                   where \(\vec{x}\) follows some distribution \(D_{\vec{x}}\) and \(\vec{f}\) follows some distribution \(D_{\vec{f}}\). </br>
-                   Depending on the concrete formulation, the matrix \(\mat{M}\) might either be sampled from some distribution or be adversarially chosen, potentially only after having seen \(\mat{A}\).
+                   where \(\vec{x}\) follows some distribution \(D_{\vec{x}}\) and \(\vec{f}\) follows some distribution \(D_{\vec{f}}\) over \(\ring\). </br>
+                   Depending on the concrete formulation, the matrix \(\mat{M} \in \ring^{k \times (m+n)} \) might either be sampled from some distribution or be adversarially chosen, potentially only after having seen \(\mat{A}\).
                 </p>
                 <p>
                    The search version asks to find \(\vec{x}\).
@@ -81,7 +81,7 @@
                 </blockquote>
 			 	
 			 	<H5> Hardness </H5>
-			 	So far, all reductions assume both \(\vec{x}\) and \(\vec{f}\) to follow a discrete Gaussian distribution. </br>
+			 	So far, all reductions assume both \(\vec{x}\) and \(\vec{f}\) to follow discrete Gaussian distributions. </br>
 			 	The reason for this is the use of Gaussian convolution properties to describe the distribution of \(\vec{x}\) conditioned on the leakage \(\mat{M},\mat{M}\vec{x}+\vec{f}\). </br>
 			 	The most general formulation is provided in <a href="https://eprint.iacr.org/2024/959">[ENP24]</a>.
 			 	Their reduction shows that Module-LWE with approximate linear hints is at least as hard as standard Module-LWE (i.e., where no hints are given out). </br>
