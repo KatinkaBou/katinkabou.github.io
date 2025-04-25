@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<title>Katharina Boudgoust</title>
+
+	</head>
+	
+	<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+\( 
+  \newcommand\ring{\mathcal{R}}
+  \newcommand\ZZ{\mathbb{Z}}
+  \renewcommand{\vec}[1]{{\boldsymbol{\mathbf{#1}}}}
+  \newcommand\mat[1]{\vec{#1}}
+  \newcommand{\sample}{\gets_{\$}}
+\)
+
+	<body <body link="#1D5266" vlink="#6397AA">
+		<div id="wrapper">
+			<div class="topnav">
+  				<a href="index.html">Home</a>
+				<a href="publications.html">Publications</a>
+				<a href="talks.html">Talks</a>
+				<a href="teaching.html">Teaching</a>
+				<a href="supervision.html">Supervision</a>
+  				<a href="personal.html">Feminism</a>
+  			</div> 
+			<section> 
+			 	<H3> Module-LWE with Hints Zoo </H3>
+			 	
+			 	Inspired by Martin Albrecht's <a href="https://malb.io/sis-with-hints.html">SIS with Hints Zoo</a>, this website summarizes variants of the Module-LWE problem allowing for additional hints on the error and/or secret. </br>
+			 	While maybe less exotic, the Module-LWE zoo seems to be less prone to attacks ;-) </br>
+			 	When listing relevant references, I tried to keep a chronical order to the best of my knowledge. </br>
+			 	If you have any comments or know about a reference I missed, please write me an e-mail.
+			 	
+			 	
+			 </section>	
+			 	
+			 	<section>
+			 	
+			 	<H5> Scope </H5>
+			 	Only results looking at the structured Module-LWE variants are listed. </br>
+			 	All of them can be instantiated with rings of degree \(d=1\), leading to the unstructured LWE case. </br>
+			 	Hence, results that are (so far) only proven for the plain LWE case, and not for the more general Module-LWE, are not (yet) discussed.
+			 	</br>
+			 	Some of them can be instantiated with rank \(n=1\), leading to the Ring-LWE case. 
+			 			 	
+			 	<H5> Mathematical Setup </H5>
+			 	
+			 	Let \(\ring\) be the ring of integers of a number field of degree \(d\). </br>
+			 	Ler \(q\) be a positive integers, called the modulus. </br>
+			 	Let \(m\) and \(n\) be positive integers, respectively defining the number of rows and columns of the matrix \(\mat{A} \in \ring^{m \times n}\). </br>
+			 	By \(\mat{I}_n\), we denote the identity matrix of dimension \( n \times n \). </br>
+			 	When looking at distributions like discrete Gaussians over \(\ring\), we need to specify the embedding (to the real numbers) we are using. </br>
+			 	For simplicity, I omit this specification, which is can be found in the respective reference.
+			 	</section>
+			 	
+			 	<section>
+			 	<H4> Approximate Linear Hints </H4>
+			 	
+			 	<blockquote>
+                <p>
+                   Given \(\mat{A} \sample \ring_{q}^{m \times n}\), \(\vec{b}= [\mat{A} | \mat{I}_n] \vec{x} \bmod q\ring\), \(\mat{M}\) and \(\vec{z}=\mat{M}\vec{x} + \vec{f}\), </br>
+                   where \(\vec{x}\) follows some distribution \(D_{\vec{x}}\) and \(\vec{f}\) follows some distribution \(D_{\vec{f}}\). </br>
+                   Depending on the concrete formulation, the matrix \(\mat{M}\) might either be sampled from some distribution or be adversarially chosen, potentially only after having seen \(\mat{A}\).
+                </p>
+                <p>
+                   The search version asks to find \(\vec{x}\).
+                   </br>
+                   The decision version asks to distinguish \(\mat{A},\vec{b},\mat{M},\vec{z}\) from a sample where \(\vec{b}\) is sampled uniformly at random. 
+                </p>
+                </blockquote>
+			 	
+			 	<H5> Hardness </H5>
+			 	So far, all reductions assume both \(\vec{x}\) and \(\vec{f}\) to follow a discrete Gaussian distribution. </br>
+			 	The reason for this is the use of Gaussian convolution properties to describe the distribution of \(\vec{x}\) conditioned on the leakage \(\mat{M},\mat{M}\vec{x}+\vec{f}\). </br>
+			 	The most general formulation is provided in <a href="https://eprint.iacr.org/2024/959">[ENP24]</a>.
+			 	Their reduction shows that Module-LWE with approximate linear hints is at least as hard as standard Module-LWE (i.e., where no hints are given out). </br>
+			 	While preserving the ring degree \(d\), the matrix dimensions \(m\) and \(n\), as well as the modulus \(q\), 
+			 	the incurred reduction loss is reflected by requiring a larger Gaussian width of the starting standard Module-LWE problem. </br>
+			 	The required gap depends on the Gaussian widths of \(\vec{x}\) and \(\vec{f}\) of the resulting Module-LWE with approximate linear hints problem, as well as on the norm \( \Vert \mat{M} \Vert_2 \) of the hint matrix \(\mat{M}\). </br>
+			 	They cover both the search and the decision versions. </br>
+			 	
+			 	<H5> References </H5>
+			 	<ul>
+				<li> 
+				        <a href="https://eprint.iacr.org/2021/046">[MKMS22]</a> 
+				        <i>Jose Maria Bermudo Mera, Angshuman Karmakar, Tilen Marc, and Azam Soleimanian.</i> 
+				        Efficient lattice-based inner-product functional encryption. 
+				        PKC 2022. <!--, Part II, volume 13178 of LNCS, pages 163-193. Springer, Cham, March 2022.-->
+				</li>	
+				
+				<li>    <a href="https://eprint.iacr.org/2023/404">[DKL+23]</a> 
+				        <i>Nico Döttling, Dimitris Kolonelos, Russell W. F. Lai, Chuanwei Lin, Giulio Malavolta, and Ahmadreza Rahimi.</i> 
+				        Efficient laconic cryptography from learning with errors.
+				        EUROCRYPT 2023. <!--, , Part III, volume 14006 of LNCS, pages 417-446. Springer, Cham, April 2023.-->
+				</li>
+				
+				<li>    <a href="https://eprint.iacr.org/2023/623">[KLSS23]</a> 
+				        <i>Duhyeong Kim, Dongwon Lee, Jinyeong Seo, and Yongsoo Song.</i> 
+				        Toward practical lattice-based proof of knowledge from hint-MLWE.
+				        CRYPTO 2023. <!--, Part V, volume 14085 of LNCS, pages 549-580. Springer, Cham, August 2023.-->
+				</li>
+				
+				<li>    <a href="https://eprint.iacr.org/2023/1400">[HPS23]</a> 
+				        <i>Calvin Abou Haidar, Alain Passelègue, and Damien Stehlé.</i> 
+				        Efficient updatable public-key encryption from lattices. 
+				        ASIACRYPT 2023. <!--, Part V, volume 14442 of LNCS, pages 342-373. Springer, Singapore, December 2023.-->
+				</li>	
+				
+				<li>    <a href="https://eprint.iacr.org/2024/959">[ENP24]</a> 
+				        <i>Thomas Espitau, Guilhem Niot, and Thomas Prest.</i> 
+				        Flood and submerse: Distributed key generation and robust threshold signature from lattices.
+				        CRYPTO 2024. <!--, Part VII, volume 14926 of LNCS, pages 425-458. Springer, Cham, August 2024.-->
+				</li>	
+				
+				<li>    <a href="https://eprint.iacr.org/2025/120">[BK25]</a> 
+				        <i>Katharina Boudgoust and Hannah Keller.</i> 
+				        Module Learning with Errors with Truncated Matrices.
+				        PQCRYPTO 2025. <!--TBD-->
+				</li>		
+
+				</ul>
+				</section>
+				
+				<section>
+				<H4> Exact Linear Hints </H4>
+				<ul>
+				<li> Ref 1 </li>
+				<li> Ref 2 </li>
+				<li> Ref 3 </li>
+				<li> Ref 4 </li>
+				</ul>
+				</section>
+				
+				<section>
+				<H4> Quadratic Hints </H4>
+				<ul>
+				<li> Ref 1 </li>
+				<li> Ref 2 </li>
+				<li> Ref 3 </li>
+				<li> Ref 4 </li>
+				</ul>
+			    </section>
+			    
+			    <section>
+				<H4> Acknowledgements </H4>
+                <p>The list of references was collected throughout multiple collaborations with Corentin, Erkan, Hannah, Sasha, Weidan and Weiqiang. Thanks for all the nice discussions!</p>
+                
+                <footer> Last update: April 25th, 2025. </footer> 
+			    </section>
+
+			
+
+		</div>
+	</body>
+
+
+</html>
